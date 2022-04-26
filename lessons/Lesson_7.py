@@ -4,16 +4,17 @@ import math
 import time
 
 link = "http://suninjuly.github.io/get_attribute.html"
+# Обозначает под браузером google chrome
+browser = webdriver.Chrome()
+
 
 # Функция для подсчета x
 def calc(x):
     # Возвращает значение функции
     return str(math.log(abs(12*math.sin(int(x)))))
 
-try:
 
-    # Обозначает под браузером google chrome
-    browser = webdriver.Chrome()
+try:
     # Открывает заданную 'link' ссылку
     browser.get(link)
     # Находит элемент на странице по ID 'treasure'

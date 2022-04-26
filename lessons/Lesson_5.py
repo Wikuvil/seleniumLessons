@@ -2,9 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+browser = webdriver.Chrome()
+link = "http://suninjuly.github.io/registration1.html"
 try:
-    link = "http://suninjuly.github.io/registration1.html"
-    browser = webdriver.Chrome()
     browser.get(link)
     # Тут идет заполнение полей из первого блока, который хранил в себе обязательные поля,
     # но это решение не подошло для следующего задания, где просто исчезло поле из блока

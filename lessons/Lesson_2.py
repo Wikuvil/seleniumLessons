@@ -4,9 +4,8 @@ import math
 import time
 
 link = "http://suninjuly.github.io/find_link_text"
-
+browser = webdriver.Chrome()
 try:
-    browser = webdriver.Chrome()
     browser.get(link)
     link1 = browser.find_element(By.LINK_TEXT, str(math.ceil(math.pow(math.pi, math.e)*10000)))
     link1.click()

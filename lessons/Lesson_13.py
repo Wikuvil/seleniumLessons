@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium import webdriver
 import math
 
@@ -15,7 +15,7 @@ def calc(x):
 try:
     browser.get(link)
     WebDriverWait(browser, 12).until(
-        EC.text_to_be_present_in_element((By.ID, "price"), '$100'))
+        ec.text_to_be_present_in_element((By.ID, "price"), '$100'))
     button = browser.find_element(By.CLASS_NAME, "btn.btn-primary")
     button.click()
     x_element = browser.find_element(By.ID, 'input_value')

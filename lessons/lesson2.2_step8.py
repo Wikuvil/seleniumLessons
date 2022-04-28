@@ -6,7 +6,7 @@ import os
 link = "http://suninjuly.github.io/file_input.html"
 browser = webdriver.Chrome()
 current_dir = os.path.abspath(os.path.dirname(__file__))
-file_path = os.path.join(current_dir, 'Lesson_10_text.txt')
+file_path = os.path.join(current_dir, 'lesson2.2_step8.txt')
 try:
     browser.get(link)
     input1 = browser.find_element(By.NAME, "firstname")

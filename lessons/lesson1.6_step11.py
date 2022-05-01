@@ -11,16 +11,11 @@ try:
     # elements = browser.find_elements(By.CSS_SELECTOR, ".first_block .form-control")
     # for element in elements:
     #     element.send_keys("Answer")
-    input1 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.first")
-    input1.send_keys("Ivan")
+    browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.first").send_keys("Ivan")
     # Поле Last name отсутствует, поэтому возникает ошибка NoSuchElementException
-    input2 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.second")
-    input2.send_keys("Petrov")
-    input3 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.third")
-    input3.send_keys("12345678910")
-
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
-    button.click()
+    browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.second").send_keys("Petrov")
+    browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.third").send_keys("12345678910")
+    browser.find_element(By.CSS_SELECTOR, "button.btn").click()
 
     time.sleep(1)
 
